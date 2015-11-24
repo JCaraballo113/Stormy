@@ -7,8 +7,10 @@ import android.content.Context;
 import android.os.Bundle;
 
 /**
- * Created by shado on 11/2/2015.
+ * Created by John Caraballo on 11/4/2015.
+ * Contact: jcaraballo019@gmail.com
  */
+
 public class AlertDialogFragment extends DialogFragment {
 
     @Override
