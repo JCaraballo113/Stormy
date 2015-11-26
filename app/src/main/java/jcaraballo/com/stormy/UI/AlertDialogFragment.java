@@ -1,10 +1,12 @@
-package jcaraballo.com.stormy;
+package jcaraballo.com.stormy.UI;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.os.Bundle;
+
+import jcaraballo.com.stormy.R;
 
 /**
  * Created by John Caraballo on 11/4/2015.

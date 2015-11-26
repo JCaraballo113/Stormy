@@ -1,14 +1,16 @@
-package jcaraballo.com.stormy;
+package jcaraballo.com.stormy.weather;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
+import jcaraballo.com.stormy.R;
+
 /**
  * Created by John Caraballo on 11/4/2015.
  * Contact: jcaraballo019@gmail.com
  */
-public class CurrentWeather {
+public class Current {
     private String mIcon;
     private long mTime;
     private double mTemperature;
