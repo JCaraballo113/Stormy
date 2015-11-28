@@ -1,11 +1,5 @@
 package jcaraballo.com.stormy.weather;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
-
-import jcaraballo.com.stormy.R;
-
 /**
  * Created by John Caraballo on 11/4/2015.
  * Contact: jcaraballo019@gmail.com
@@ -36,41 +30,7 @@ public class Current {
     }
 
     public int getIconId() {
-        // clear-day, clear-night, rain, snow, sleet, wind, fog, cloudy, partly-cloudy-day, or partly-cloudy-night
-        int iconId = R.mipmap.clear_day;
-
-        if (mIcon.equals("clear-day")) {
-            iconId = R.mipmap.clear_day;
-        }
-        else if (mIcon.equals("clear-night")) {
-            iconId = R.mipmap.clear_night;
-        }
-        else if (mIcon.equals("rain")) {
-            iconId = R.mipmap.rain;
-        }
-        else if (mIcon.equals("snow")) {
-            iconId = R.mipmap.snow;
-        }
-        else if (mIcon.equals("sleet")) {
-            iconId = R.mipmap.sleet;
-        }
-        else if (mIcon.equals("wind")) {
-            iconId = R.mipmap.wind;
-        }
-        else if (mIcon.equals("fog")) {
-            iconId = R.mipmap.fog;
-        }
-        else if (mIcon.equals("cloudy")) {
-            iconId = R.mipmap.cloudy;
-        }
-        else if (mIcon.equals("partly-cloudy-day")) {
-            iconId = R.mipmap.partly_cloudy;
-        }
-        else if (mIcon.equals("partly-cloudy-night")) {
-            iconId = R.mipmap.cloudy_night;
-        }
-
-        return iconId;
+        return Forecast.getIconId(mIcon);
     }
 
     public long getTime() {
@@ -78,11 +38,7 @@ public class Current {
     }
 
     public String getFormattedTime(){
-        SimpleDateFormat formatter = new SimpleDateFormat("h:mm a");
-        formatter.setTimeZone(TimeZone.getTimeZone(getTimeZone()));
-        Date dateTime = new Date(getTime() * 1000);
-        String timeString = formatter.format(dateTime);
-        return timeString;
+        return Forecast.getFormattedTime("h:mm a", getTimeZone(), getTime());
     }
 
     public void setTime(long time) {
