@@ -385,6 +385,5 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     @Override
     public void onLocationChanged(Location location) {
         handleNewLocation(location);
-        getForecast(latitude,longitude);
     }
 }
